@@ -12,7 +12,10 @@
 5. add the **-vvvv** flag to see more details about the error
 6. 
 
+> **WHERE SHOULD I PUT MY ANSIBLE.CFG FILE** ? Ansible looks for an ansible.cfg file in the following places, in this order: File specified by the ANSIBLE_CONFIG environment variable ./ansible.cfg (ansible.cfg in the current directory) ~/.ansible.cfg (.ansible.cfg in your home directory) /etc/ansible/ansible.cfg (Linux) or /usr/local/etc/ansible/ansible.cfg
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNjEwNDEwNiwxNzE0NzU2NDkzXX0=
+eyJoaXN0b3J5IjpbLTIxMDY3MDk0MzIsLTUxNjEwNDEwNiwxNz
+E0NzU2NDkzXX0=
 -->
