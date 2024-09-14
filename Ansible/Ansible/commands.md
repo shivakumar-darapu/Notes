@@ -9,9 +9,10 @@
 
     #!/usr/bin/env python3  import ansible_runner r = ansible_runner.run(private_data_dir='./playbooks', playbook='playbook.yml')  print("{}: {}".format(r.status, r.rc))  print("Final status:") print(r.stats)
 
-5. add the **-vvvv** flag to see more details about the error:
+5. add the **-vvvv** flag to see more details about the error
+6. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNDU4NjgwMiwxNzE0NzU2NDkzXX0=
+eyJoaXN0b3J5IjpbLTUxNjEwNDEwNiwxNzE0NzU2NDkzXX0=
 -->
