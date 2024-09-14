@@ -7,12 +7,12 @@
 
    
 
-> #!/usr/bin/env python3 
-> import ansible_runner r = ansible_runner.run(private_data_dir='./playbooks', playbook='playbook.yml') 
-> print("{}: {}".format(r.status, r.rc)) 
-> print("Final status:") print(r.stats)
+    > #!/usr/bin/env python3 
+    > import ansible_runner r = ansible_runner.run(private_data_dir='./playbooks', playbook='playbook.yml') 
+    > print("{}: {}".format(r.status, r.rc)) 
+    > print("Final status:") print(r.stats)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMTEzMzddfQ==
+eyJoaXN0b3J5IjpbLTE0NjExODM3MzVdfQ==
 -->
