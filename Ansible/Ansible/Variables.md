@@ -10,9 +10,15 @@
 > - name: get the operators name     
 > pause: 
 >   ..prompt: "Please enter your name" 
->  register: opname
+> register: opname
+
+5.The extra variables, or extra-vars type, are variables supplied on the command line when executing ansible-playbook via --extra-vars. Variable data can be supplied as a list of key=value pairs, a quoted piece of JSON data, or a reference to a YAML-formatted file with variable data defined within: 
+
+> --extra-vars "foo=bar owner=fred" 
+> --extra-vars '{"services":["nova-api","nova-conductor"]}' 
+> --extra-vars @/path/to/data.yaml
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5MTM1ODE3LDkyMTg4MDgzOCwtMTA0OT
-I2ODA1NywtMTY5NDAwNjI0MiwtMTgzNjg3OTYzMF19
+eyJoaXN0b3J5IjpbMTE5MjI1MDg5NCw5MjE4ODA4MzgsLTEwND
+kyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4Nzk2MzBdfQ==
 -->
