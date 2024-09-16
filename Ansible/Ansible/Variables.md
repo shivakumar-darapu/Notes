@@ -36,11 +36,13 @@
 
 > https://docs.ansible. com/ansible/latest/reference_appendices/special_variables.html.
 7. Accessing external data Data for role variables, play variables, and task variables can also come from external sources. Ansible provides a mechanism to access and evaluate data from the control machine (the machine running ansible-playbook). The mechanism is called a lookup plugin, and a number of them come with Ansible. These plugins can be used to look up or access data by reading files, generate and locally store passwords on the Ansible host for later reuse, evaluate environment variables, pipe data in from executables, access data in the Redis or etcd systems, render data from template files, query dnstxt records, and more. The syntax is as follows: lookup('', 'plugin_argument') For example, to use the mastery value from etcd in a debug task, execute the following command: 
+```yaml
 - name: show data from etcd 
   debug: 
 	  msg: "{{ lookup('etcd', 'mastery') }}"
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTkwMjUxNDcsMTE5MjI1MDg5NCw5Mj
-E4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4
-Nzk2MzBdfQ==
+eyJoaXN0b3J5IjpbLTIyMzE3Nzk3NiwxMTkyMjUwODk0LDkyMT
+g4MDgzOCwtMTA0OTI2ODA1NywtMTY5NDAwNjI0MiwtMTgzNjg3
+OTYzMF19
 -->
