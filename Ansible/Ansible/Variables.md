@@ -34,8 +34,10 @@
 			  var: group_names
 ```
 
+> https://docs.ansible. com/ansible/latest/reference_appendices/special_variables.html.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTkwMjkwOTcsMTE5MjI1MDg5NCw5Mj
+eyJoaXN0b3J5IjpbLTE3Njc4NzA1MzksMTE5MjI1MDg5NCw5Mj
 E4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4
 Nzk2MzBdfQ==
 -->
