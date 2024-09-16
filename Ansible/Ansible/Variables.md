@@ -17,10 +17,25 @@
 > --extra-vars "foo=bar owner=fred" 
 > --extra-vars '{"services":["nova-api","nova-conductor"]}' 
 > --extra-vars @/path/to/data.yaml
-> 
+
+6. In addition to the previously listed variable types, Ansible offers a set of variables that deserve their own special mention – magic variables. These are variables that are always set when a playbook is run without them having to be explicitly created. Their names are always reserved and should not be used for other variables. Magic variables are used to provide information about the current playbook run to the playbooks themselves and are extremely useful as Ansible environments become larger and more complex. For example, if one of your plays needs information about which groups the current host is in, the group_names magic variable returns a list of these. Similarly, if you need to configure the hostname for a service using Ansible, the inventory_hostname magic variable will return the current hostname as it is defined in the inventory. A simple example of this would be as follows:
+
+```YAML
+--- 
+- name: demonstrate magic variables 
+hosts: all 
+gather_facts: false 
+tasks: 
+	- name: tell us which host we are on 
+	  debug: 
+		  var: inventory_hostname 
+	- name: tell us which groups we are in 
+	  debug: 
+		  var: group_names
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDAzNjMwNDYsMTE5MjI1MDg5NCw5Mj
-E4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4
-Nzk2MzBdfQ==
+eyJoaXN0b3J5IjpbLTIxNzA1NDg0OSwxMTkyMjUwODk0LDkyMT
+g4MDgzOCwtMTA0OTI2ODA1NywtMTY5NDAwNjI0MiwtMTgzNjg3
+OTYzMF19
 -->
