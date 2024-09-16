@@ -6,6 +6,8 @@ module_blacklist:
 \# Deprecated – to be removed in 2.11
 	\- sf_account_manager
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NjMzNzQwMSwtMTQ1MzAzODMzNl19
+eyJoaXN0b3J5IjpbMTczNjk3NTA3OSwxNzk2MzM3NDAxLC0xND
+UzMDM4MzM2XX0=
 -->
