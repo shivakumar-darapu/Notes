@@ -44,10 +44,30 @@
 8. Lookups are evaluated when the task referencing them is executed, which allows for dynamic data discovery. To reuse a particular lookup in multiple tasks and reevaluate it each time, a playbook variable can be defined with a lookup value. Each time the playbook variable is referenced, the lookup will be executed, potentially providing different values over time.
 
 Precedence order Ansible defines the precedence order as follows, with those closest to the top of the list winning. Note that this can change from release to release, and has changed quite significantly since Ansible 2.4 was released, so it is worth reviewing, especially when upgrading your Ansible environment: 
-9. Extra vars (from the command line) always wins 
-10. 2. include parameters 3. Role (and include_role) parameters 4. Variables defined with set_facts, and those created with the register task directive 5. include_vars 6. Task vars (only for the specific task) 7. Block vars (only for the tasks within the block) 8. Role vars (defined in main.yml in the vars subdirectory of the role). 9. Play vars_files 10. Play vars_prompt 11. Play vars 12. Host facts (and also cached set_facts) 13. host_vars playbook 14. host_vars inventory 15. Inventory file (or script) defined host vars 16. group_vars playbook 17. group_vars inventory 18. group_vars/all playbook 19. group_vars/all inventory 20. Inventory file (or script) defined group vars 21. Role defaults 22. Command-line values (for example, -u REMOTE_USER)
+1. Extra vars (from the command line) always wins 
+ 2. include parameters 
+ 3. Role (and include_role) parameters 
+ 4. Variables defined with set_facts, and those created with the register task directive 
+ 5. 5. include_vars 
+ 6. . Task vars (only for the specific task) 
+ 7. Block vars (only for the tasks within the block) 
+ 8.  Role vars (defined in main.yml in the vars subdirectory of the role). 
+ 9.  Play vars_files 
+ 10.  Play vars_prompt 
+ 11. Play vars 
+ 12.  Host facts (and also cached set_facts) 
+ 13.  host_vars playbook 
+ 14. host_vars inventory 
+ 15.  Inventory file (or script) defined host vars
+ 16. group_vars playbook 
+ 17. group_vars inventory 
+ 18.  group_vars/all playbook 
+ 19. group_vars/all inventory 
+ 20. Inventory file (or script) defined group vars 
+ 21.  Role defaults 
+ 22. Command-line values (for example, -u REMOTE_USER)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTAyNDcxNCwtMjIzMTc3OTc2LDExOT
-IyNTA4OTQsOTIxODgwODM4LC0xMDQ5MjY4MDU3LC0xNjk0MDA2
-MjQyLC0xODM2ODc5NjMwXX0=
+eyJoaXN0b3J5IjpbMzgyNzc3Njk4LC0yMjMxNzc5NzYsMTE5Mj
+I1MDg5NCw5MjE4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYy
+NDIsLTE4MzY4Nzk2MzBdfQ==
 -->
