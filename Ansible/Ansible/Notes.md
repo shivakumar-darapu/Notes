@@ -4,9 +4,8 @@
 > For example, one of the currently deprecated modules to be completely removed in Ansible 2.11 is sf_account_manager (see https://docs.ansible.com/ansible/latest/porting_ guides/porting_guide_2.7.html#deprecation-notices). Thus, to prevent anyone from using this internally, the plugin_filters.yml file would look like this: --- filter_version:'1.0' 
 module_blacklist: 
 \# Deprecated – to be removed in 2.11
-\- sf_account_manager
+	\- sf_account_manager
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTcwNTI1OTEsLTE0NTMwMzgzMzZdfQ
-==
+eyJoaXN0b3J5IjpbMTc5NjMzNzQwMSwtMTQ1MzAzODMzNl19
 -->
