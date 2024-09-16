@@ -22,20 +22,20 @@
 
 ```YAML
 --- 
-- name: demonstrate magic variables 
-hosts: all 
-gather_facts: false 
-tasks: 
-	- name: tell us which host we are on 
-	  debug: 
-		  var: inventory_hostname 
-	- name: tell us which groups we are in 
-	  debug: 
-		  var: group_names
+-   name: demonstrate magic variables 
+	hosts: all 
+	gather_facts: false 
+	tasks: 
+		- name: tell us which host we are on 
+		  debug: 
+			  var: inventory_hostname 
+		- name: tell us which groups we are in 
+		  debug: 
+			  var: group_names
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzA1NDg0OSwxMTkyMjUwODk0LDkyMT
-g4MDgzOCwtMTA0OTI2ODA1NywtMTY5NDAwNjI0MiwtMTgzNjg3
-OTYzMF19
+eyJoaXN0b3J5IjpbLTEwOTkwMjkwOTcsMTE5MjI1MDg5NCw5Mj
+E4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4
+Nzk2MzBdfQ==
 -->
