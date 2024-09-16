@@ -44,7 +44,7 @@
 For dynamic inventories, variables can be set by the dynamic inventory script or plugin, and the structure is similar to static inventories, but may vary based on the source of the dynamic data.
 
 9. GROUP PRIORITY 
-Ansible 2.4 introduced the ansible_group_priority group variable, which can be 
+Ansible 2.4 introduced the ansible_group_priority group variable, which can be used to set the priority of precedence for value whose key name match in vars of group variables if present in two groups. 
 
 ### Example of a Simple Inventory File with Variables
 
@@ -99,5 +99,5 @@ Static Inventory Example
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNjcwMTYxXX0=
+eyJoaXN0b3J5IjpbLTIwOTMwMTkyMzFdfQ==
 -->
