@@ -4,8 +4,15 @@
 	 These types of variables might be used to define Ansible behavior when dealing with these hosts or site-specific data related to the applications that these hosts run. Whether a variable comes from host_vars or group_vars, it will be assigned to a host's hostvars, and it can be accessed from the playbooks and template files. Accessing a host's own variables can be done just by referencing the name, such as {{ foobar }}, and accessing another host's variables can be accomplished by accessing hostvars; for example, to access the foobar variable for examplehost: {{ hostvars['examplehost']['foobar'] }}. These variables have global scope
  2. The second major variable type is **role variables**. These are variables specific to a role and are utilized by the role tasks – however, it should be noted that once a role has been added to a playbook, its variables are generally accessible throughout the rest of the playbook, including from within other roles. In most simple playbooks, this won't matter, as the roles are typically run one at a time, but it is worth remembering this as playbook structure gets more complex—otherwise, unexpected behavior may result from variables being set within a different role!
  3. The third major variable type is **play variable**s. These variables are defined in the control keys of a play, either directly by the vars key or sourced from external files via the vars_files key. Additionally, the play can interactively prompt the user for variable data using vars_prompt. These variables are to be used within the scope of the play and in any tasks or included tasks of the play. The variables apply to all hosts within the play and can be referenced as if they are hostvars.
- 4. 
+ 4. The fourth variable type is task variables. Task variables are made from data discovered while executing tasks or in the fact-gathering phase of a play. These variables are hostspecific and are added to the host's hostvars and can be used as such, which also means they have global scope after the point in which they were discovered or defined. Variables of this type can be discovered via gather_facts and fact modules (modules that do not alter state but rather return data), populated from task return data via the register task key or defined directly by a task making use of the set_fact or add_host modules. Data can also be interactively obtained from the operator using the prompt argument to the pause module and registering the result: 
+ 
+
+> - name: get the operators name     
+> pause: 
+>   ..prompt: "Please enter your name" 
+>  register: opname
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTMyNjYyNTgsOTIxODgwODM4LC0xMD
-Q5MjY4MDU3LC0xNjk0MDA2MjQyLC0xODM2ODc5NjMwXX0=
+eyJoaXN0b3J5IjpbMzc5MTM1ODE3LDkyMTg4MDgzOCwtMTA0OT
+I2ODA1NywtMTY5NDAwNjI0MiwtMTgzNjg3OTYzMF19
 -->
