@@ -17,8 +17,10 @@
 > --extra-vars "foo=bar owner=fred" 
 > --extra-vars '{"services":["nova-api","nova-conductor"]}' 
 > --extra-vars @/path/to/data.yaml
+> 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjI1MDg5NCw5MjE4ODA4MzgsLTEwND
-kyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4Nzk2MzBdfQ==
+eyJoaXN0b3J5IjpbLTEwNDAzNjMwNDYsMTE5MjI1MDg5NCw5Mj
+E4ODA4MzgsLTEwNDkyNjgwNTcsLTE2OTQwMDYyNDIsLTE4MzY4
+Nzk2MzBdfQ==
 -->
